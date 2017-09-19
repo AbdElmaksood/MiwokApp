@@ -1,6 +1,8 @@
 package com.example.android.miwok;
 
+import android.annotation.TargetApi;
 import android.content.Context;
+import android.os.Build;
 import android.support.annotation.LayoutRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -36,6 +38,7 @@ public class WordAdapter extends ArrayAdapter<Word> {
     // convertView = the recycled list item view
     // parent = the parent of all the list item views which is ListView
 
+    @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         // Check if the existing view is being reused
@@ -81,6 +84,8 @@ public class WordAdapter extends ArrayAdapter<Word> {
         int color = ContextCompat.getColor(getContext(), mColorResorceID);
         // Set the background color of the text container View
         textContainer.setBackgroundColor(color);
+
+
 
         // Return the whole list item layout (containing 2 TextViews and an ImageView)
         // so that it can be shown in the ListView

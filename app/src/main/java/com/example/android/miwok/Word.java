@@ -74,4 +74,15 @@ public class Word {
         return mImage != mnoImageFound;
 
     }
+
+
+    @Override
+    public String toString() {
+        return "Word{" +
+                "maudio=" + maudio +
+                ", mdefaultTranslation='" + mdefaultTranslation + '\'' +
+                ", mmiwokTranslation='" + mmiwokTranslation + '\'' +
+                ", mImage=" + mImage +
+                '}';
+    }
 }

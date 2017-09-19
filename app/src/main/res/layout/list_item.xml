@@ -1,52 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="horizontal"
+    android:layout_height="wrap_content"
+
     >
 
-    <ImageView
-        android:id="@+id/image"
-        android:layout_width="@dimen/list_item_height"
-        android:layout_height="@dimen/list_item_height"
-        android:background="@color/tan_background"
-        android:src="@drawable/color_black" />
-
     <LinearLayout
-        android:id="@+id/text_container"
+        android:id="@+id/parent"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/list_item_height"
-        android:orientation="vertical"
-        android:paddingLeft="16dp">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
 
-        <TextView
-            android:id="@+id/miwokword"
+        >
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="@dimen/list_item_height"
+            android:layout_height="@dimen/list_item_height"
+            android:background="@color/tan_background"
+            android:src="@drawable/color_black" />
+
+        <LinearLayout
+            android:id="@+id/text_container"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:gravity="bottom"
-            android:textColor="#ffff"
-            android:textSize="18sp"
-            tools:text="lutti"
-            tools:textColor="00000"
+            android:layout_height="@dimen/list_item_height"
+            android:background="?android:attr/selectableItemBackground"
+            android:orientation="vertical"
+            android:paddingLeft="16dp"
 
-            />
+            >
 
-        <TextView
-            android:id="@+id/defaulthword"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:gravity="left"
-            android:textColor="#ffff"
-            android:textSize="18sp"
-            tools:text="واحد"
-            tools:textColor="00000" />
+
+            <TextView
+                android:id="@+id/miwokword"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="bottom"
+                android:textColor="#ffff"
+                android:textSize="18sp"
+                tools:text="lutti"
+                tools:textColor="00000"
+
+                />
+
+            <TextView
+                android:id="@+id/defaulthword"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:textColor="#ffff"
+                android:textSize="18sp"
+                tools:text="واحد"
+                tools:textColor="00000" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="1dp" />
+
     </LinearLayout>
 
+    <ImageView
+        android:id="@+id/arrow"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_alignEnd="@+id/parent"
+        android:layout_alignRight="@+id/parent"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="16dp"
+        android:src="@drawable/arrow" />
 
-    </LinearLayout>
-
-
+</RelativeLayout>
 
